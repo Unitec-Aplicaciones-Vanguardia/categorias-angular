@@ -4,21 +4,21 @@ import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CategoriesComponent } from './categories/categories.component';
-import { CategoriesListComponent } from './categories-list/categories-list.component';
-import { FilterTexboxComponent } from './filter-texbox/filter-texbox.component';
+import { CategoriesModule } from './categories/categories.module';
+import { CoreModule } from './core/core.module';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CategoriesComponent,
-    CategoriesListComponent,
-    FilterTexboxComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CategoriesModule,
+    CoreModule,
+    ProductsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

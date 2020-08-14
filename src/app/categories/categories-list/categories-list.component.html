@@ -10,7 +10,11 @@
         </thead>
             <tbody>
                 <tr *ngFor="let category of filteredCategories">
-                    <td>{{ category.description | titlecase }}</td>
+                    <td>
+                        <a routerLink="/products/{{category.id}}">
+                            {{ category.description | titlecase }}
+                        </a>
+                    </td>
                     <td>{{ category.total }}</td>
                 </tr>
             </tbody>

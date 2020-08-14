@@ -1,0 +1,12 @@
+<table class="table table-hover">
+    <thead>
+        <th>Descripcion</th>
+        <th>Cantidad</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{ product.description }}</td>
+            <td>{{ product.amount }}</td>
+        </tr>
+    </tbody>
+</table>

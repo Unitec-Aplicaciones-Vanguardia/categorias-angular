@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Category } from '../shared/category';
+import { Category } from 'src/app/shared/category';
 
 @Component({
   selector: 'app-categories-list',

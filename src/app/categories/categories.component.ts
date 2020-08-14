@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../shared/category';
+import { DataService } from '../core/data.service';
 
 @Component({
   selector: 'app-categories',
@@ -10,16 +11,13 @@ export class CategoriesComponent implements OnInit {
 
   categories : Category[];
 
-  constructor() { }
+  constructor(private dataService : DataService) { }
 
   ngOnInit(): void {
-    this.categories = [
-      {description: "a", id: 1, total: 5},
-      {description: "b", id: 2, total: 25},
-      {description: "c", id: 3, total: 15},
-      {description: "d", id: 4, total: 5},
-      {description: "e", id: 5, total: 35}
-    ]
+    this.dataService.getCategories()
+      .subscribe(
+        (data: Category[]) => this.categories = data
+      );
   }
 
 }
